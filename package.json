@@ -1,0 +1,28 @@
+{
+  "name": "ipv4-utils",
+  "version": "0.1.35",
+  "description": "Package with IPv4 utils",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasbarak/ip-utils.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "ip",
+    "utils",
+    "ip-utils",
+    "range"
+  ],
+  "author": "tomasbarak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomasbarak/ip-utils/issues"
+  },
+  "homepage": "https://github.com/tomasbarak/ip-utils#readme"
+}
