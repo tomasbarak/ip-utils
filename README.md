@@ -4,8 +4,6 @@
 * [Overview](#overview)
 * [Installation](#installation)
 * [Usage](#usage)
-    * [SDK Initialization](#sdk-initialization)
-    * [SDK Methods](#sdk-methods)
 
 ## Overview
 IPv4 Utils is a library for working with IPv4 addresses.
