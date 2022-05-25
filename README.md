@@ -86,3 +86,16 @@ Allowed values for IP address:
     -IPv4 object (Ex: { address: '192.168.0.0', netmask: {address: '255.255.255.0', binary: '11111111111111111111111100000000'}, cidr: '192.168.0.0/24' })
 */
 ```
+
+### Generate IPv4 ranges
+```js
+const range = ipv4_utils.generateIPRange('192.168.0.0', '192.168.255.255', {
+    //Possible values for includeLimits: true, false
+    //Include given start and end IPv4 addresses in the result
+    includeLimits: true,
+    arrayFormat: 'string',
+    //Possible values for arrayFormat: 'string', 'array', 'number'
+    //Return result array containing IPv4 address as string, array or number
+});
+//Result: ['192.168.0.0'...'192.168.255.255'] (Array containing IPv4 range in specified format)
+```

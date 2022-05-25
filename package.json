@@ -1,7 +1,7 @@
 {
   "name": "ipv4-utils",
-  "version": "0.2.1",
-  "description": "Package with IPv4 utils",
+  "version": "0.2.2",
+  "description": "IPv4 utilities",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

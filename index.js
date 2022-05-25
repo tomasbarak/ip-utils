@@ -52,7 +52,7 @@ module.exports.myIP = () => {
  * @returns Array of generated IP addresses
  */
 
-module.exports.generateIPRange = (from, to, includeBorders = false) => {
+module.exports.generateIPRange = (from, to, options = { includeLimits: false, arrayFormat: 'string' }) => {
     if(isValid(from) && isValid(to)){
         const from_arr = parse(from);
         const to_arr = parse(to);
@@ -61,10 +61,23 @@ module.exports.generateIPRange = (from, to, includeBorders = false) => {
         const to_int = strToInt32(to_arr.join('.'));
 
         let range = [];
-        let offset = includeBorders ? 0 : 1;
+        let offset = options.includeLimits ? 0 : 1;
 
         for (let i = from_int + offset; i <= to_int - offset; i++) {
-            range.push(int32ToStr(i));
+            switch (options.arrayFormat) {
+                case 'string':
+                    range.push(int32ToStr(i));
+                    break;
+                case 'number':
+                    range.push(i);
+                    break;
+                case 'array':
+                    range.push(parseInt32(i));
+                    break;
+                default:
+                    range.push(int32ToStr(i));
+                    break;
+            }
         }
 
         return range;
